@@ -114,7 +114,7 @@
     
     NSHTTPCookieStorage* cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     NSArray* sinaweiboCookies = [cookies cookiesForURL:
-                                [NSURL URLWithString:@"http://open.weibo.cn"]];
+                                [NSURL URLWithString:@"https://open.weibo.cn"]];
     
     for (NSHTTPCookie* cookie in sinaweiboCookies)
     {
