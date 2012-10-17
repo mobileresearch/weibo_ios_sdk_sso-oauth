@@ -9,6 +9,8 @@
 #ifndef sinaweibo_ios_sdk_SinaWeiboConstants_h
 #define sinaweibo_ios_sdk_SinaWeiboConstants_h
 
+#define SinaWeiboSdkVersion                @"2.0"
+
 #define kSinaWeiboSDKErrorDomain           @"SinaWeiboSDKErrorDomain"
 #define kSinaWeiboSDKErrorCodeKey          @"SinaWeiboSDKErrorCodeKey"
 
