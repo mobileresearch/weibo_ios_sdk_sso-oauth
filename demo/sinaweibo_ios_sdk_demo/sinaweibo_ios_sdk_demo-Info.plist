@@ -25,7 +25,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>sinaweibosso.3530380309</string>
+				<string>sinaweibosso.{app_key或者自定义的回调值}</string>
 			</array>
 		</dict>
 	</array>
