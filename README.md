@@ -12,6 +12,8 @@
  
   *注：app_redirect_uri，即第三方应用登录回调页，可在微博开放平台上找到，具体路径:开放平台->我的应用->应用信息->高级信息->OAuth2.0授权设置->授权回调页；若显示未填写，请设置此属性，否则将造成SDK登陆时错误。*
 
+## 常见问题回答 ##
+https://github.com/mobileresearch/weibo_ios_sdk_sso-oauth/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94
 
 ## demo使用 ##
 1. 将整个目录下载拷贝至自己的工作空间中；
