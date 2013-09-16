@@ -24,8 +24,6 @@
 		18E67ECA17057D9000DFAD63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E67EC917057D9000DFAD63 /* Default-568h@2x.png */; };
 		18E67ECD17057D9000DFAD63 /* SendMessageToWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E67ECC17057D9000DFAD63 /* SendMessageToWeiboViewController.m */; };
 		18E7DE5F17096B630026CCED /* ProvideMessageForWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7DE5E17096B630026CCED /* ProvideMessageForWeiboViewController.m */; };
-		430CA63C17D99C0400179524 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430CA63B17D99C0400179524 /* CFNetwork.framework */; };
-		430CA63E17D99C1200179524 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430CA63D17D99C1200179524 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,18 +51,6 @@
 		18E67ECC17057D9000DFAD63 /* SendMessageToWeiboViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendMessageToWeiboViewController.m; sourceTree = "<group>"; };
 		18E7DE5D17096B630026CCED /* ProvideMessageForWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvideMessageForWeiboViewController.h; sourceTree = "<group>"; };
 		18E7DE5E17096B630026CCED /* ProvideMessageForWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvideMessageForWeiboViewController.m; sourceTree = "<group>"; };
-		430CA63B17D99C0400179524 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		430CA63D17D99C1200179524 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		432E6ECB17D9EB9A004D7462 /* AFHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
-		432E6ECC17D9EB9A004D7462 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		432E6ECD17D9EB9A004D7462 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
-		432E6ECE17D9EB9A004D7462 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
-		432E6ECF17D9EB9A004D7462 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
-		432E6ED017D9EB9A004D7462 /* AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		432E6ED117D9EB9A004D7462 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
-		432E6ED217D9EB9A004D7462 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		432E6ED317D9EB9A004D7462 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
-		432E6ED417D9EB9A004D7462 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430CA63E17D99C1200179524 /* Security.framework in Frameworks */,
-				430CA63C17D99C0400179524 /* CFNetwork.framework in Frameworks */,
 				18E67EB417057D9000DFAD63 /* UIKit.framework in Frameworks */,
 				18E67EB617057D9000DFAD63 /* Foundation.framework in Frameworks */,
 				18E67EB817057D9000DFAD63 /* CoreGraphics.framework in Frameworks */,
@@ -97,7 +81,6 @@
 		18E67EA717057D8F00DFAD63 = {
 			isa = PBXGroup;
 			children = (
-				432E6ECA17D9EB9A004D7462 /* AFNetworking */,
 				1858B4C5170BD256004F674A /* libWeiboSDK */,
 				18E67EB917057D9000DFAD63 /* WeiboSDKDemo */,
 				18E67EB217057D9000DFAD63 /* Frameworks */,
@@ -116,8 +99,6 @@
 		18E67EB217057D9000DFAD63 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				430CA63D17D99C1200179524 /* Security.framework */,
-				430CA63B17D99C0400179524 /* CFNetwork.framework */,
 				18E67EB317057D9000DFAD63 /* UIKit.framework */,
 				18E67EB517057D9000DFAD63 /* Foundation.framework */,
 				18E67EB717057D9000DFAD63 /* CoreGraphics.framework */,
@@ -155,23 +136,6 @@
 				18E67EC917057D9000DFAD63 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		432E6ECA17D9EB9A004D7462 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				432E6ECB17D9EB9A004D7462 /* AFHTTPClient.h */,
-				432E6ECC17D9EB9A004D7462 /* AFHTTPRequestOperation.h */,
-				432E6ECD17D9EB9A004D7462 /* AFImageRequestOperation.h */,
-				432E6ECE17D9EB9A004D7462 /* AFJSONRequestOperation.h */,
-				432E6ECF17D9EB9A004D7462 /* AFNetworkActivityIndicatorManager.h */,
-				432E6ED017D9EB9A004D7462 /* AFNetworking.h */,
-				432E6ED117D9EB9A004D7462 /* AFPropertyListRequestOperation.h */,
-				432E6ED217D9EB9A004D7462 /* AFURLConnectionOperation.h */,
-				432E6ED317D9EB9A004D7462 /* AFXMLRequestOperation.h */,
-				432E6ED417D9EB9A004D7462 /* UIImageView+AFNetworking.h */,
-			);
-			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

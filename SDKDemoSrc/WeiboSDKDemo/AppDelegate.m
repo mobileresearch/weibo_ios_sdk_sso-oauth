@@ -21,8 +21,6 @@
 
 @implementation AppDelegate
 
-@synthesize wbtoken;
-
 - (void)dealloc
 {
     [_window release];
@@ -105,9 +103,6 @@
                                                        delegate:nil
                                               cancelButtonTitle:@"确定"
                                               otherButtonTitles:nil];
-
-        self.wbtoken = [(WBAuthorizeResponse *)response accessToken];
-        
         [alert show];
         [alert release];
     }
