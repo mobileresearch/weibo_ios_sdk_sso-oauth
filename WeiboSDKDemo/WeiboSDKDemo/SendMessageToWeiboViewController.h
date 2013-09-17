@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ProvideMessageForWeiboViewController.h"
 
-@interface SendMessageToWeiboViewController : ProvideMessageForWeiboViewController
+
+@interface SendMessageToWeiboViewController : ProvideMessageForWeiboViewController<UIAlertViewDelegate ,WeiboSDKJSONDelegate>
 
 @end
