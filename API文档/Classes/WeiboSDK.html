@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.1 (build 858)" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -51,7 +51,11 @@
 	
 	<option value="//api/name/handleOpenURL:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ handleOpenURL:delegate:</option>
 	
+	<option value="//api/name/inviteFriend:withUid:withToken:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ inviteFriend:withUid:withToken:delegate:</option>
+	
 	<option value="//api/name/isWeiboAppInstalled">&nbsp;&nbsp;&nbsp;&nbsp;+ isWeiboAppInstalled</option>
+	
+	<option value="//api/name/logOutWithToken:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ logOutWithToken:delegate:</option>
 	
 	<option value="//api/name/openWeiboApp">&nbsp;&nbsp;&nbsp;&nbsp;+ openWeiboApp</option>
 	
@@ -99,7 +103,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/handleOpenURL:delegate:">handleOpenURL:delegate:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/inviteFriend:withUid:withToken:delegate:">inviteFriend:withUid:withToken:delegate:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isWeiboAppInstalled">isWeiboAppInstalled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logOutWithToken:delegate:">logOutWithToken:delegate:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openWeiboApp">openWeiboApp</a></span></li>
 	
@@ -142,8 +150,8 @@
 </tr>
 						</tbody></table></div>
 					
-					
-					
+                    
+                    
 					
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
@@ -167,70 +175,72 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isWeiboAppInstalled">+&nbsp;isWeiboAppInstalled</a></code>
-		<span class="tooltip"><p>检查用户是否安装了微博客户端程序</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/openWeiboApp">+&nbsp;openWeiboApp</a></code>
-		<span class="tooltip"><p>打开微博客户端程序</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/getWeiboAppInstallUrl">+&nbsp;getWeiboAppInstallUrl</a></code>
-		<span class="tooltip"><p>获取微博客户端程序的itunes安装地址</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/getWeiboAppSupportMaxSDKVersion">+&nbsp;getWeiboAppSupportMaxSDKVersion</a></code>
-		<span class="tooltip"><p>获取当前微博客户端程序所支持的SDK最高版本</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/getSDKVersion">+&nbsp;getSDKVersion</a></code>
-		<span class="tooltip"><p>获取当前微博SDK的版本号</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/registerApp:">+&nbsp;registerApp:</a></code>
-		<span class="tooltip"><p>向微博客户端程序注册第三方应用</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/handleOpenURL:delegate:">+&nbsp;handleOpenURL:delegate:</a></code>
-		<span class="tooltip"><p>处理微博客户端程序通过URL启动第三方应用时传递的数据</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sendRequest:">+&nbsp;sendRequest:</a></code>
-		<span class="tooltip"><p>发送请求给微博客户端程序，并切换到微博</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sendResponse:">+&nbsp;sendResponse:</a></code>
-		<span class="tooltip"><p>收到微博客户端程序的请求后，发送对应的应答给微博客户端端程序，并切换到微博</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/enableDebugMode:">+&nbsp;enableDebugMode:</a></code>
-		<span class="tooltip"><p>设置WeiboSDK的调试模式</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logOutWithToken:delegate:">+&nbsp;logOutWithToken:delegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/inviteFriend:withUid:withToken:delegate:">+&nbsp;inviteFriend:withUid:withToken:delegate:</a></code>
 	</span>
 	
 	
@@ -489,6 +499,68 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/inviteFriend:withUid:withToken:delegate:" title="inviteFriend:withUid:withToken:delegate:"></a>
+	<h3 class="subsubtitle method-title">inviteFriend:withUid:withToken:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>邀请好友使用应用
+调用此接口后，将发送私信至好友，成功将返回微博标准私信结构</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)inviteFriend:(NSString *)<em>text</em> withUid:(NSString *)<em>uid</em> withToken:(NSString *)<em>access_token</em> delegate:(id&lt;WeiboSDKJSONDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>text</em></dt>
+			<dd><p>对好友邀请内容的文字描述</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>uid</em></dt>
+			<dd><p>好友的uid</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>access_token</em></dt>
+			<dd><p>第三方应用之前申请的Token</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>WeiboSDKJSONDelegate对象，用于接收微博SDK对于发起的接口请求的请求的响应</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">WeiboSDK.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/isWeiboAppInstalled" title="isWeiboAppInstalled"></a>
 	<h3 class="subsubtitle method-title">isWeiboAppInstalled</h3>
 	
@@ -510,6 +582,58 @@
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>已安装返回YES，未安装返回NO</p>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">WeiboSDK.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/logOutWithToken:delegate:" title="logOutWithToken:delegate:"></a>
+	<h3 class="subsubtitle method-title">logOutWithToken:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>取消授权，登出接口
+调用此接口后，token将失效</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)logOutWithToken:(NSString *)<em>token</em> delegate:(id&lt;WeiboSDKJSONDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>token</em></dt>
+			<dd><p>第三方应用之前申请的Token</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>WeiboSDKJSONDelegate对象，用于接收微博SDK对于发起的接口请求的请求的响应</p></dd>
+		</dl>
+		
+	</div>
+	
+	
 	
 	
 	
@@ -748,6 +872,8 @@
 					
 					
 					
+                    
+                    
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -758,9 +884,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 WEIBO. All rights reserved. (Last updated: 2013-04-18)</span><br />
+						<p><span class="copyright">&copy; 2013 WEIBO. All rights reserved. (Last updated: 2013-09-23)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
 					</div>
 				</div>
