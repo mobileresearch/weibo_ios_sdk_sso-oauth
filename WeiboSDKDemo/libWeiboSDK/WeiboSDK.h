@@ -21,13 +21,13 @@ typedef NS_ENUM(NSInteger, WeiboSDKResponseStatusCode)
 };
 
 @protocol WeiboSDKDelegate;
-@protocol WeiboSDKJSONDelegate;
+@protocol WBHttpRequestDelegate;
 @class WBBaseRequest;
 @class WBBaseResponse;
 @class WBMessageObject;
 @class WBImageObject;
 @class WBBaseMediaObject;
-
+@class WBHttpRequest;
 /**
  微博SDK接口类
  */
@@ -115,19 +115,24 @@ typedef NS_ENUM(NSInteger, WeiboSDKResponseStatusCode)
  调用此接口后，token将失效
  @param token 第三方应用之前申请的Token
  @param delegate WeiboSDKJSONDelegate对象，用于接收微博SDK对于发起的接口请求的请求的响应
-
+ 
  */
-+ (void)logOutWithToken:(NSString *)token delegate:(id<WeiboSDKJSONDelegate>)delegate;
++ (void)logOutWithToken:(NSString *)token delegate:(id<WBHttpRequestDelegate>)delegate;
 
 /**
  邀请好友使用应用
  调用此接口后，将发送私信至好友，成功将返回微博标准私信结构
- @param text 对好友邀请内容的文字描述
- @param uid  好友的uid
+ @param data 邀请数据。必须为json字串的形式，必须做URLEncode，采用UTF-8编码。
+ data参数支持的参数：
+    参数名称	值的类型	是否必填	说明描述
+    text	string	true	要回复的私信文本内容。文本大小必须小于300个汉字。
+    url	string	false	邀请点击后跳转链接。默认为当前应用地址。
+    invite_logo	string	false	邀请Card展示时的图标地址，大小必须为80px X 80px，仅支持PNG、JPG格式。默认为当前应用logo地址。
+ @param uid  被邀请人，需为当前用户互粉好友。
  @param access_token 第三方应用之前申请的Token
  @param delegate WeiboSDKJSONDelegate对象，用于接收微博SDK对于发起的接口请求的请求的响应
  */
-+(void)inviteFriend:(NSString* )text withUid:(NSString *)uid withToken:(NSString *)access_token delegate:(id<WeiboSDKJSONDelegate>)delegate;
++(void)inviteFriend:(NSString* )data withUid:(NSString *)uid withToken:(NSString *)access_token delegate:(id<WBHttpRequestDelegate>)delegate;
 
 @end
 
@@ -155,19 +160,39 @@ typedef NS_ENUM(NSInteger, WeiboSDKResponseStatusCode)
 @end
 
 /**
- 接收并处理来自微博sdk对于网络请求接口的调用响应
+ 接收并处理来自微博sdk对于网络请求接口的调用响应 以及openAPI
  如inviteFriend、logOutWithToken的请求
  */
-@protocol WeiboSDKJSONDelegate <NSObject>
+@protocol WBHttpRequestDelegate <NSObject>
 
-/**
- 收到一个来自微博SDK的响应
- 
- 收到微博SDK对于发起的接口请求的请求的响应
- @param JsonObject 具体的响应返回内容
- @param error 当有网络错误时返回的NSError，无网络错误返回nil
- */
-- (void)didReceiveWeiboSDKResponse:(id)JsonObject err:(NSError *)error;
+- (void)request:(WBHttpRequest *)request didReceiveResponse:(NSURLResponse *)response;
+//- (void)request:(WBHttpRequest *)request didReceiveRawData:(NSData *)data;
+- (void)request:(WBHttpRequest *)request didFailWithError:(NSError *)error;
+- (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result;
+@end
+
+@interface WBHttpRequest : NSObject
+{
+    NSString                        *url;
+    NSString                        *httpMethod;
+    NSDictionary                    *params;
+    
+    NSURLConnection                 *connection;
+    NSMutableData                   *responseData;
+    
+    id<WBHttpRequestDelegate>    delegate;
+}
+
++ (void)requestWithURL:(NSString *)url
+            httpMethod:(NSString *)httpMethod
+                params:(NSDictionary *)params
+              delegate:(id<WBHttpRequestDelegate>)delegate;
+
++ (void)requestWithAccessToken:(NSString *)accessToken
+                           url:(NSString *)url
+                    httpMethod:(NSString *)httpMethod
+                        params:(NSDictionary *)params
+                      delegate:(id<WBHttpRequestDelegate>)delegate;
 
 @end
 

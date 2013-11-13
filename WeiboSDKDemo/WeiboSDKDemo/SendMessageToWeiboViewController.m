@@ -20,7 +20,7 @@
     [ssoButton addTarget:self action:@selector(ssoButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     ssoButton.frame = CGRectMake(20, 250, 280, 50);
     [self.view addSubview:ssoButton];
-
+    
     UIButton *inviteFriendButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [inviteFriendButton setTitle:@"邀请好友" forState:UIControlStateNormal];
     [inviteFriendButton addTarget:self action:@selector(inviteFriendButtonPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -45,7 +45,7 @@
                          @"Other_Info_1": [NSNumber numberWithInt:123],
                          @"Other_Info_2": @[@"obj1", @"obj2"],
                          @"Other_Info_3": @{@"key1": @"obj1", @"key2": @"obj2"}};
-//    request.shouldOpenWeiboAppInstallPageIfNotInstalled = NO;
+    //    request.shouldOpenWeiboAppInstallPageIfNotInstalled = NO;
     
     [WeiboSDK sendRequest:request];
 }
@@ -89,32 +89,39 @@
     
     AppDelegate *myDelegate =(AppDelegate*)[[UIApplication sharedApplication] delegate];
     NSLog(@"%@",myDelegate.wbtoken);
-    [WeiboSDK inviteFriend:@"testinvite" withUid:[textField text] withToken:myDelegate.wbtoken delegate:self];
+    NSString *jsonData = @"{\"text\": \"新浪新闻是新浪网官方出品的新闻客户端，用户可以第一时间获取新浪网提供的高品质的全球资讯新闻，随时随地享受专业的资讯服务，加入一起吧\",\"url\": \"http://app.sina.com.cn/appdetail.php?appID=84475\",\"invite_logo\":\"http://sinastorage.com/appimage/iconapk/1b/75/76a9bb371f7848d2a7270b1c6fcf751b.png\"}";
+
+    [WeiboSDK inviteFriend:jsonData withUid:[textField text] withToken:myDelegate.wbtoken delegate:self];
 }
 
-- (void)didReceiveWeiboSDKResponse:(id)JsonObject err:(NSError *)error;
+- (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result
 {
     NSString *title = nil;
     UIAlertView *alert = nil;
-    if (!error)
-    {
-        title = @"收到网络回调";
-        alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:[NSString stringWithFormat:@"%@",JsonObject]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"确定"
-                                          otherButtonTitles:nil];
-    }
-    else
-    {
-        title = @"网络异常";
-        alert = [[UIAlertView alloc] initWithTitle:title
-                                           message:[NSString stringWithFormat:@"err:%@\n%@",error,JsonObject]
-                                          delegate:nil
-                                 cancelButtonTitle:@"确定"
-                                 otherButtonTitles:nil];
-    }
+    
+    title = @"收到网络回调";
+    alert = [[UIAlertView alloc] initWithTitle:title
+                                       message:[NSString stringWithFormat:@"%@",result]
+                                      delegate:nil
+                             cancelButtonTitle:@"确定"
+                             otherButtonTitles:nil];
     [alert show];
     [alert release];
 }
+
+- (void)request:(WBHttpRequest *)request didFailWithError:(NSError *)error;
+{
+    NSString *title = nil;
+    UIAlertView *alert = nil;
+    
+    title = @"请求异常";
+    alert = [[UIAlertView alloc] initWithTitle:title
+                                       message:[NSString stringWithFormat:@"%@",error]
+                                      delegate:nil
+                             cancelButtonTitle:@"确定"
+                             otherButtonTitles:nil];
+    [alert show];
+    [alert release];
+}
+
 @end

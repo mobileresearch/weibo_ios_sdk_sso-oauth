@@ -24,8 +24,6 @@
 		18E67ECA17057D9000DFAD63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E67EC917057D9000DFAD63 /* Default-568h@2x.png */; };
 		18E67ECD17057D9000DFAD63 /* SendMessageToWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E67ECC17057D9000DFAD63 /* SendMessageToWeiboViewController.m */; };
 		18E7DE5F17096B630026CCED /* ProvideMessageForWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7DE5E17096B630026CCED /* ProvideMessageForWeiboViewController.m */; };
-		430CA63C17D99C0400179524 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430CA63B17D99C0400179524 /* CFNetwork.framework */; };
-		430CA63E17D99C1200179524 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430CA63D17D99C1200179524 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,8 +51,6 @@
 		18E67ECC17057D9000DFAD63 /* SendMessageToWeiboViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendMessageToWeiboViewController.m; sourceTree = "<group>"; };
 		18E7DE5D17096B630026CCED /* ProvideMessageForWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvideMessageForWeiboViewController.h; sourceTree = "<group>"; };
 		18E7DE5E17096B630026CCED /* ProvideMessageForWeiboViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvideMessageForWeiboViewController.m; sourceTree = "<group>"; };
-		430CA63B17D99C0400179524 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		430CA63D17D99C1200179524 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				430CA63E17D99C1200179524 /* Security.framework in Frameworks */,
-				430CA63C17D99C0400179524 /* CFNetwork.framework in Frameworks */,
 				18E67EB417057D9000DFAD63 /* UIKit.framework in Frameworks */,
 				18E67EB617057D9000DFAD63 /* Foundation.framework in Frameworks */,
 				18E67EB817057D9000DFAD63 /* CoreGraphics.framework in Frameworks */,
@@ -105,8 +99,6 @@
 		18E67EB217057D9000DFAD63 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				430CA63D17D99C1200179524 /* Security.framework */,
-				430CA63B17D99C0400179524 /* CFNetwork.framework */,
 				18E67EB317057D9000DFAD63 /* UIKit.framework */,
 				18E67EB517057D9000DFAD63 /* Foundation.framework */,
 				18E67EB717057D9000DFAD63 /* CoreGraphics.framework */,
@@ -174,6 +166,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "SINA iOS Team";
+				TargetAttributes = {
+					18E67EAF17057D8F00DFAD63 = {
+						DevelopmentTeam = 93KUUP9B5K;
+					};
+				};
 			};
 			buildConfigurationList = 18E67EAB17057D8F00DFAD63 /* Build configuration list for PBXProject "WeiboSDKLibDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -294,8 +291,9 @@
 		18E67ED417057D9000DFAD63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: rui sun (JYACG36U6P)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: rui sun (JYACG36U6P)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeiboSDKDemo/WeiboSDKDemo-Prefix.pch";
 				INFOPLIST_FILE = "WeiboSDKDemo/WeiboSDKDemo-Info.plist";
@@ -305,8 +303,8 @@
 					"\"$(SRCROOT)/libWeiboSDK\"",
 				);
 				PRODUCT_NAME = SDKDemo;
-				PROVISIONING_PROFILE = "BB78C7EA-F887-4AC7-953C-3BC529928758";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BB78C7EA-F887-4AC7-953C-3BC529928758";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				USER_HEADER_SEARCH_PATHS = "../WeiboSDKSrc/WeiboSDK/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -315,7 +313,8 @@
 		18E67ED517057D9000DFAD63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sina.Com Technology (China) Co., Ltd.";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sina.Com Technology (China) Co., Ltd.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WeiboSDKDemo/WeiboSDKDemo-Prefix.pch";

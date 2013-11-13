@@ -104,7 +104,7 @@
         image.imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"image_1" ofType:@"jpg"]];
         message.imageObject = image;
     }
-    
+
     if (self.mediaSwitch.on)
     {
         WBWebpageObject *webpage = [WBWebpageObject object];

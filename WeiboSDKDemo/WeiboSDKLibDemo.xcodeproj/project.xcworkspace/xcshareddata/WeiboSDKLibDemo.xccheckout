@@ -5,24 +5,24 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C45FACF8-0818-4E3A-A3AD-A146376AEA7A</string>
+	<string>B5366391-EFA3-482D-8990-D28F745005BF</string>
 	<key>IDESourceControlProjectName</key>
 	<string>WeiboSDKLibDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>7CFFBD83-87CB-486D-B13A-78EFACC89EBE</key>
+		<key>5124ADAE-B4AF-4D64-8849-9D8D3A8BA302</key>
 		<string>https://svn.intra.sina.com.cn/wap/trunk/client/project/cocoalibrary/WeiboSDK/trunk</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>WeiboSDKDemo/WeiboSDKLibDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>7CFFBD83-87CB-486D-B13A-78EFACC89EBE</key>
+		<key>5124ADAE-B4AF-4D64-8849-9D8D3A8BA302</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
 	<dict>
-		<key>7CFFBD83-87CB-486D-B13A-78EFACC89EBE</key>
+		<key>5124ADAE-B4AF-4D64-8849-9D8D3A8BA302</key>
 		<string>https://svn.intra.sina.com.cn/wap</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -30,7 +30,7 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>7CFFBD83-87CB-486D-B13A-78EFACC89EBE</string>
+	<string>5124ADAE-B4AF-4D64-8849-9D8D3A8BA302</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -41,7 +41,7 @@
 			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
 			<string>trunk/client/project/cocoalibrary/WeiboSDK/trunk</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>7CFFBD83-87CB-486D-B13A-78EFACC89EBE</string>
+			<string>5124ADAE-B4AF-4D64-8849-9D8D3A8BA302</string>
 			<key>IDESourceControlWCCName</key>
 			<string>WeiboSDK (trunk)</string>
 		</dict>
