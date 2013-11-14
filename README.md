@@ -8,7 +8,6 @@
 
 # 概述
 微博 IOS 平台 SDK 为第三方应用提供了简单易用的微博API调用服务，使第三方客户端无需了解复杂的验证机制即可进行授权登陆，并提供微博分享功能，可直接通过微博官方客户端分享微博。
->本文档详细内容请查阅：[微博IOS平台SDK文档V2.3.0.pdf](https://github.com/mobileresearch/weibo_ios_sdk_sso-oauth/blob/master/%E5%BE%AE%E5%8D%9AIOS%E5%B9%B3%E5%8F%B0SDK%E6%96%87%E6%A1%A3V2.3.0.pdf)
 
 # 名词解释
 | 名词        | 注解    | 
